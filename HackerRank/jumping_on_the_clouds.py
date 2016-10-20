@@ -9,16 +9,17 @@ __mtime__ = '20/10/2016'
 def jumping(arr):
     i = 0
     counter = 0
-    while i < len(arr)-1:  # Befor Last Cloud
+    while i < len(arr)-1:  # Before Last Cloud
         if i + 2 < len(arr):
             check = i + 2
         else:
             check = i + 1
 
-        if arr[check] != 1:
+        if arr[check] != 1:  # Better Case: Jump 2 clouds
             i += 2
-        else:
+        else:  # Bad Case: Jump 1 cloud
             i += 1
+
         counter += 1
     return counter
 
