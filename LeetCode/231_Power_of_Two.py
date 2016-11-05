@@ -12,7 +12,7 @@ def power_of_two(number):
     # Use & operator
     # 100 & 011 == 000
     # So we need ! (001 & 010)
-
+    # 39ms...
     return (number > 0) and not (number & (number - 1))
 
 print power_of_two(2)
